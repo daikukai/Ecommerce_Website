@@ -1,1 +1,2 @@
-# This file will be used for my web development task that I am due to built for my integrative programming course 
+# This file is for my web development project that I am due to submit as assesment for my integrative programming course 
+# The language that is to be used for this project is PHP, and it must be built using the laravel framework.

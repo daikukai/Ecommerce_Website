@@ -100,7 +100,7 @@
                     @csrf
                     <button type="submit" class="clear-cart-btn">Clear Cart</button>
                 </form>
-                <button style="background-color: #007bff;">Proceed to Checkout</button> </div>
+                <a href="{{ route('checkout.show') }}" style="background-color: #007bff; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Proceed to Checkout</a></div>
         @else
             <p class="empty-cart-message">Your cart is empty.</p>
             <div class="cart-actions">

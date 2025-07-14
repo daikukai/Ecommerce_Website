@@ -41,12 +41,16 @@
         @endif
 
         <div class="product-image">
-            @if($product->image_url)
-                <img src="{{ $product->image_url }}" alt="{{ $product->name }}">
-            @else
-                <img src="https://via.placeholder.com/400x300?text=No+Image" alt="No Image">
-            @endif
-        </div>
+    @if($product->image_url)
+        <img src="{{ asset($product->image_url) }}"
+             alt="{{ $product->name }}"
+             style="width: 100%; height: auto; max-height: 400px; object-fit: contain; border: 1px solid #ddd; border-radius: 8px;">
+    @else
+        {{-- Use a local "no image" placeholder since external ones aren't working for you --}}
+        <img src="{{ asset('images/no_image.png') }}"
+             alt="No Image Available"
+             style="width: 100%; height: auto; max-height: 400px; object-fit: contain; border: 1px solid #ddd; border-radius: 8px;">
+    @endif
         <div class="product-details">
             <h1>{{ $product->name }}</h1>
             <p><strong>Category:</strong> {{ $product->category->name ?? 'N/A' }}</p>
